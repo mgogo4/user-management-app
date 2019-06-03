@@ -1,0 +1,24 @@
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+spring.profiles: dev
+
+### DB Config ###
+spring:
+  datasource:
+    url: jdbc:h2:mem:usermanagementDB;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    platform: h2
+    driverClassName: org.h2.Driver
+    username: user
+    password:
+  jpa.hibernate.ddl-auto: create
+
+### Server Config ###
+server.port: 8080 #Server Port
+
+# Enabling H2 Console
+spring.h2.console.enabled: true
+

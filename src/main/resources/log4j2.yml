@@ -1,0 +1,21 @@
+Configutation:
+  status: warn
+
+  Appenders:
+    Console:
+      name: CONSOLE
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: "%style{%d{dd-MM-YYYY HH:mm:ss.SSS}}{black} %highlight{%-5level }[%style{%t}{bright,blue}] %style{%logger{36}}{bright,yellow}: %msg%n%throwable"
+
+  Loggers:
+      Root:
+        level: info
+        AppenderRef:
+          - ref: CONSOLE
+      Logger:
+        - name: pl.mgogo.user_management_app
+          level: debug
+          additivity: false
+          AppenderRef:
+            - ref: CONSOLE

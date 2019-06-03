@@ -1,0 +1,28 @@
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+spring.profiles.active: dev,initDB,swagger
+
+spring:
+  application:
+    name: user-management-app
+  messages:
+    basename: locale.messages
+    encoding: UTF-8
+    fallback-to-system-locale: false
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: false
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+    show-sql: false
+    properties:
+      hibernate.show_sql: false
+  jackson:
+    default-property-inclusion: non_null
